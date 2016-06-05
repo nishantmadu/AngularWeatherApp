@@ -24,7 +24,7 @@
       </thead>
       <tbody>
       <tr ng-repeat="n in hm.forecastResponse.list">
-        <th>{{n.dt}}</th>
+        <th>{{n.dt*1000 | date:'mediumDate'}}</th>
         <th>{{n.main.temp-273}} &#8451;</th>
         <th>{{n.main.humidity}}</th>
         <th>{{n.weather[0].description}}</th>

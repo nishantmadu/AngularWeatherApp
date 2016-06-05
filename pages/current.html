@@ -8,7 +8,7 @@
     <div class="form-group">
       <input type="text" class="form-control" ng-model="hm.cityName"/>
     </div>
-    <a class="btn btn-primary" ng-click="hm.getCityTemperature()">Gets Info</a>
+    <a class="btn btn-primary" ng-click="hm.getCityTemperature()">Today's Weather</a>
     <a href ="#/forecast" type="button" class="btn btn-danger pull-right">Get Forecast</a>
 
     <h3 id="textInfo"></h3>
@@ -25,7 +25,7 @@
       </thead>
       <tbody>
       <tr>
-        <th>{{hm.weatherResponse.dt}}</th>
+        <th>{{hm.weatherResponse.dt*1000 | date:'dd-MM-yy'}}</th>
         <th>{{hm.weatherResponse.main.temp}} &#8451;</th>
         <th>{{hm.weatherResponse.main.humidity}}</th>
         <th>{{hm.weatherResponse.weather[0].description}}</th>
