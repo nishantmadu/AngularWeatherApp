@@ -21,12 +21,12 @@
           <th>Temperature</th>
           <th>Humidity</th>
           <th>How it is right now</th>
-        </tr>
+          </tr>
       </thead>
       <tbody>
       <tr>
-        <th>{{hm.weatherResponse.dt*1000 | date:'dd-MM-yy'}}</th>
-        <th>{{hm.weatherResponse.main.temp}} &#8451;</th>
+        <th>{{hm.convertDate(hm.weatherResponse.dt)}}</th>
+        <th>{{hm.weatherResponse.main.degree}} &#8451;</th>
         <th>{{hm.weatherResponse.main.humidity}}</th>
         <th>{{hm.weatherResponse.weather[0].description}}</th>
       </tr>
